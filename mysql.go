@@ -1,10 +1,10 @@
 package main
 
 import (
-	_ "github.com/go-sql-driver/mysql"
 	"database/sql"
 	"fmt"
-	)
+	_ "github.com/go-sql-driver/mysql"
+)
 
 func main() {
 
@@ -20,9 +20,7 @@ func main() {
 		var apellido string
 		err = rows.Scan(&id, &nombre, &apellido)
 		checkErr(err)
-		fmt.Println(id)
-		fmt.Println(nombre)
-		fmt.Println(apellido)
+		fmt.Println(id, ",", nombre, ",", apellido)
 	}
 
 }
